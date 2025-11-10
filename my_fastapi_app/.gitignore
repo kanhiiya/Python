@@ -67,3 +67,6 @@ logs/
 # FastAPI specific
 .pytest_cache/
 instance/
+
+# PostgreSQL data
+postgres_data/
