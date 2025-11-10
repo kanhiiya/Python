@@ -11,8 +11,11 @@ class ItemBase(BaseModel):
 class ItemCreate(ItemBase):
     pass
 
-class ItemUpdate(ItemBase):
-    pass
+class ItemUpdate(BaseModel):
+    name: Optional[str] = Field(None, min_length=1, max_length=100)
+    description: Optional[str] = None
+    price: Optional[float] = Field(None, gt=0)
+    quantity: Optional[int] = Field(None, ge=0)
 
 class ItemResponse(ItemBase):
     id: int
