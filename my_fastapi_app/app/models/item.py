@@ -1,7 +1,7 @@
 from sqlalchemy import String, Float, Integer
 from sqlalchemy.orm import Mapped, mapped_column
-from database import Base
 from datetime import datetime
+from app.core.database import Base
 
 class Item(Base):
     __tablename__ = "items"
